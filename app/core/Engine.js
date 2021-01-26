@@ -34,7 +34,7 @@ import Logger from '../util/Logger';
 import { LAST_INCOMING_TX_BLOCK_INFO } from '../constants/storage';
 import { MAINNET } from '../constants/network';
 
-const EMPTY = 'EMPTY';
+const NON_EMPTY = 'NON_EMPTY';
 
 const encryptor = new Encryptor();
 let refreshing = false;
@@ -79,7 +79,7 @@ class Engine {
 					new PersonalMessageManager(),
 					new MessageManager(),
 					new NetworkController({
-						infuraProjectId: process.env.MM_INFURA_PROJECT_ID || EMPTY,
+						infuraProjectId: process.env.MM_INFURA_PROJECT_ID || NON_EMPTY,
 						providerConfig: {
 							static: {
 								eth_sendTransaction: async (payload, next, end) => {
