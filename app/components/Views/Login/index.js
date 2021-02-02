@@ -85,7 +85,8 @@ const styles = StyleSheet.create({
 		flexDirection: 'column'
 	},
 	label: {
-		fontSize: 14,
+		color: colors.black000,
+		fontSize: 16,
 		marginBottom: 12,
 		...fontStyles.normal
 	},
@@ -114,6 +115,7 @@ const styles = StyleSheet.create({
 	biometryLabel: {
 		flex: 1,
 		fontSize: 16,
+		color: colors.black000,
 		...fontStyles.normal
 	},
 	biometrySwitch: {
